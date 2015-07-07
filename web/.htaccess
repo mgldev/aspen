@@ -1,0 +1,18 @@
+php_flag magic_quotes_gpc off
+php_flag register_globals off
+
+<IfModule mod_rewrite.c>
+# Turn the rewrite rule engine
+RewriteEngine on
+
+# Main site processing
+#RewriteBase /
+# Anything non-directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# Anything non-file
+RewriteCond %{REQUEST_FILENAME} !-f
+# Pass to the index file
+
+RewriteRule .*$ index.php [L,QSA]
+
+</IfModule>
