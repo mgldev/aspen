@@ -9,7 +9,7 @@ class ServiceContainer extends \ArrayObject {
 	public function get($name) {
 
 		if (!isset($this[$name])) {
-			throw new \Exception('Item "' . $name . '" could not be found in the service container');
+			throw new \Exception('Item "' . $name . '" could not be found in the Service Container"');
 		}
 
 		if (is_callable($this[$name])) {
@@ -24,5 +24,6 @@ class ServiceContainer extends \ArrayObject {
 		}
 
 		return $this[$name];
+
 	}
 }

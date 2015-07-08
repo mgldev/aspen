@@ -5,17 +5,18 @@ require_once __DIR__ . '/../../site/vendor/autoload.php';
 class ServiceContainerTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * @var	Jenz\ServiceContainer
+	 * @var Jenz\ServiceContainer
 	 */
 	protected $object;
 
 	public function setup() {
 
 		$this->object = new Jenz\ServiceContainer();
+
 	}
 
 	/**
-	 * @expectedException	\Exception
+	 * @expectedException \Exception
 	 */
 	public function testExceptionThrownWhenItemNotSet() {
 
@@ -47,11 +48,12 @@ class ServiceContainerTest extends PHPUnit_Framework_TestCase {
 
 		$hash1 = spl_object_hash($this->object->get('foo'));
 		$hash2 = spl_object_hash($this->object->get('foo'));
+
 		$this->assertEquals($hash1, $hash2);
+
 	}
 
 	public function tearDown() {
-
 		unset($this->object);
 	}
 }
