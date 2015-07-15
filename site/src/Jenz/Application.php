@@ -5,6 +5,7 @@ namespace Jenz;
 use Jenz\Http\Request;
 use Jenz\Http\Response;
 use Jenz\Http\Router;
+use Jenz\Http\Dispatcher;
 
 class Application {
 
@@ -41,12 +42,23 @@ class Application {
 	 */
 	public function getResponse(Request $request) {
 
-		$response = $this->getContainer()->get('Response');
+		try {
 
-		$router = $this->getRouter();
+			$router = $this->getRouter();
+			$route = $router->match($request);
 
-		$route = $router->match($request);
-		var_dump($route);
+			if (!$route) {
+				throw new \Exception('404! Route not found');
+			}
+
+			$dispatcher = $this->getDispatcher();
+
+			$response = $dispatcher->dispatch($request, $route);
+
+		} catch (\Exception $ex) {
+			throw $ex;
+		}
+
 		return $response;
 	}
 
@@ -56,5 +68,13 @@ class Application {
 	protected function getRouter() {
 
 		return $this->getContainer()->get('Router');
+	}
+
+	/**
+	 * @return Dispatcher
+	 */
+	protected function getDispatcher() {
+
+		return $this->getContainer()->get('Dispatcher');
 	}
 }
