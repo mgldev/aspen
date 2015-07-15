@@ -1,9 +1,11 @@
 <?php
 
+use Jenz\Application\Extension\REST as RESTExtension;
 use Jenz\Http\Dispatcher;
 use Jenz\Http\Dispatcher\Value\Handler\Json as JsonValueHandler;
 use Jenz\Http\Dispatcher\Value\Handler\JsonApi as JsonApiValueHandler;
 use Jenz\Http\Dispatcher\Value\Handler\Twig as TwigValueHandler;
+use Jenz\Http\Dispatcher\Value\TwigValue;
 use Jenz\Http\Response;
 use Jenz\Http\Route\SimpleRoute;
 use Jenz\Http\Router;
@@ -66,9 +68,17 @@ $container['Dispatcher'] = function() use ($application) {
 
 	$dispatcher->addValueHandler(new JsonValueHandler());
 
-
 	return $dispatcher;
 };
+
+$application->extend(new RESTExtension());
+
+$application->post('/hello', function() {
+	return new TwigValue(
+		'hello.twig',
+		array('name' => 'Mike')
+	);
+});
 
 $response = $application->getResponse($request);
 echo $response;

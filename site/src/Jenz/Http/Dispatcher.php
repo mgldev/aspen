@@ -61,17 +61,22 @@ class Dispatcher {
 
 		$container = $this->application->getContainer();
 
-		$controllerName = $route->getController();
-		$actionName = $route->getAction();
+		$controller = $route->getController();
 
-		$controller = $container->get($controllerName);
+		if ($controller instanceof \Closure) {
+			$value = call_user_func($controller);
+		} else {
 
-		if ($controller instanceof ApplicationAwareInterface) {
-			$controller->setApplication($this->application);
-			$controller->setRequest($request);
+			$action = $route->getAction();
+			$controllerInstance = $container->get($controller);
+
+			if ($controller instanceof ApplicationAwareInterface) {
+				$controller->setApplication($this->application);
+				$controller->setRequest($request);
+			}
+
+			$value = $controllerInstance->{$action}();
 		}
-
-		$value = $controller->{$actionName}();
 
 		$response = $this->handleValue($request, $value);
 		return $response;
