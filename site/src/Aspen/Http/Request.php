@@ -1,11 +1,11 @@
 <?php
 
-namespace Jenz\Http;
+namespace Aspen\Http;
 
 /**
  * Class Request
  *
- * @package Jenz
+ * @package Aspen
  */
 class Request {
 

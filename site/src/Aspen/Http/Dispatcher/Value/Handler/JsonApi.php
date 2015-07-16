@@ -1,11 +1,11 @@
 <?php
 
-namespace Jenz\Http\Dispatcher\Value\Handler;
+namespace Aspen\Http\Dispatcher\Value\Handler;
 
-use Jenz\Http\Dispatcher\Value\Handler as ValueHandler;
-use Jenz\Http\Dispatcher\Value\JsonApi as JsonApiValue;
-use Jenz\Http\Request;
-use Jenz\Http\Response;
+use Aspen\Http\Dispatcher\Value\Handler as ValueHandler;
+use Aspen\Http\Dispatcher\Value\JsonApi as JsonApiValue;
+use Aspen\Http\Request;
+use Aspen\Http\Response;
 
 class JsonApi implements ValueHandler {
 

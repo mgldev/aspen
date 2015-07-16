@@ -6,12 +6,12 @@
  * Time: 16:00
  */
 
-namespace Jenz\Http;
+namespace Aspen\Http;
 
 
-use Jenz\Application;
-use Jenz\Http\Controller\ApplicationAwareInterface;
-use Jenz\Http\Dispatcher\Value\Handler;
+use Aspen\Application;
+use Aspen\Http\Controller\ApplicationAwareInterface;
+use Aspen\Http\Dispatcher\Value\Handler;
 
 class Dispatcher {
 

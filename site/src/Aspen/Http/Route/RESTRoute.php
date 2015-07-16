@@ -1,9 +1,9 @@
 <?php
 
-namespace Jenz\Http\Route;
+namespace Aspen\Http\Route;
 
-use Jenz\Http\Request;
-use Jenz\Http\Route;
+use Aspen\Http\Request;
+use Aspen\Http\Route;
 
 class RESTRoute extends Route {
 

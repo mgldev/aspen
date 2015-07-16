@@ -1,12 +1,12 @@
 <?php
 
-namespace Jenz;
+namespace Aspen;
 
-use Jenz\Application\Extension;
-use Jenz\Http\Request;
-use Jenz\Http\Response;
-use Jenz\Http\Router;
-use Jenz\Http\Dispatcher;
+use Aspen\Application\Extension;
+use Aspen\Http\Request;
+use Aspen\Http\Response;
+use Aspen\Http\Router;
+use Aspen\Http\Dispatcher;
 
 class Application {
 

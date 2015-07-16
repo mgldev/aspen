@@ -1,9 +1,9 @@
 <?php
 
-namespace Jenz\Http\Controller;
+namespace Aspen\Http\Controller;
 
-use Jenz\Application;
-use Jenz\Http\Request;
+use Aspen\Application;
+use Aspen\Http\Request;
 
 trait ApplicationAwareTrait {
 

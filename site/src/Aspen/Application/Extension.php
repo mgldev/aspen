@@ -6,10 +6,10 @@
  * Time: 23:06
  */
 
-namespace Jenz\Application;
+namespace Aspen\Application;
 
 
-use Jenz\Application;
+use Aspen\Application;
 
 abstract class Extension {
 

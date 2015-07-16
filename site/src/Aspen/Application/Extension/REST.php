@@ -6,12 +6,12 @@
  * Time: 23:07
  */
 
-namespace Jenz\Application\Extension;
+namespace Aspen\Application\Extension;
 
-use Jenz\Application;
-use Jenz\Application\Extension;
-use Jenz\Http\Route\RESTRoute;
-use Jenz\Http\Router;
+use Aspen\Application;
+use Aspen\Application\Extension;
+use Aspen\Http\Route\RESTRoute;
+use Aspen\Http\Router;
 
 class REST extends Extension {
 

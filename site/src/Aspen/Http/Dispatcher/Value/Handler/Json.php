@@ -1,10 +1,10 @@
 <?php
 
-namespace Jenz\Http\Dispatcher\Value\Handler;
+namespace Aspen\Http\Dispatcher\Value\Handler;
 
-use Jenz\Http\Dispatcher\Value\Handler as ValueHandler;
-use Jenz\Http\Request;
-use Jenz\Http\Response;
+use Aspen\Http\Dispatcher\Value\Handler as ValueHandler;
+use Aspen\Http\Request;
+use Aspen\Http\Response;
 
 class Json implements ValueHandler {
 

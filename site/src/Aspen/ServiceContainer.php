@@ -1,6 +1,6 @@
 <?php
 
-namespace Jenz;
+namespace Aspen;
 
 class ServiceContainer extends \ArrayObject {
 

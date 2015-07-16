@@ -1,8 +1,8 @@
 <?php
 
-namespace Jenz\Http;
+namespace Aspen\Http;
 
-use Jenz\Http\Request;
+use Aspen\Http\Request;
 
 abstract class Route {
 
