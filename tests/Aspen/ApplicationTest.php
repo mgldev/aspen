@@ -2,10 +2,10 @@
 
 require_once __DIR__ . '/../../site/vendor/autoload.php';
 
-use Jenz\Application;
-use Jenz\Http\Response;
-use Jenz\ServiceContainer;
-use Jenz\Http\Request;
+use Aspen\Application;
+use Aspen\Http\Response;
+use Aspen\ServiceContainer;
+use Aspen\Http\Request;
 
 class ApplicationTest extends \PHPUnit_Framework_TestCase {
 

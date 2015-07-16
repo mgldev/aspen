@@ -5,13 +5,13 @@ require_once __DIR__ . '/../../site/vendor/autoload.php';
 class ServiceContainerTest extends PHPUnit_Framework_TestCase {
 
 	/**
-	 * @var Jenz\ServiceContainer
+	 * @var Aspen\ServiceContainer
 	 */
 	protected $object;
 
 	public function setup() {
 
-		$this->object = new Jenz\ServiceContainer();
+		$this->object = new Aspen\ServiceContainer();
 
 	}
 
