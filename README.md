@@ -1,2 +1,3 @@
-# wwtbam
-Who Wants to be a Millionaire Game
+#Aspen
+
+An experimental playground for an MCV based PHP framework.
